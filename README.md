@@ -49,8 +49,3 @@ Ter um buscador no Header no projeto usando parâmetros como:
 8. Trabalhar com carregamento lazyloading ao abrir a single de um artigo;   
 9. Será um plus se a single de artigo conter a versão AMP;
 
-### Prazo
-- Data de entrega: até 28/11/2019 - Segunda Feira - 18:00
-- Enviar a url do repositório do Github em resposta ao e-mail. 
-- O responsável técnico da empresa ofertante irá marcar uma vídeo chamada a respeito das decisões e soluções desenvolvidas no projeto.
-- Dúvidas: gabriel@coodesh.com 
