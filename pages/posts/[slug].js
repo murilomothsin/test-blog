@@ -1,4 +1,5 @@
 import React from 'react'
+import { useRouter } from 'next/router'
 import { parseISO, format } from 'date-fns'
 import Head from 'next/head'
 import Layout from '../../components/layout'
@@ -18,8 +19,14 @@ const useStyles = makeStyles(() => ({
 }))
 
 export default function Post({ post, classes = useStyles() }) {
+  const router = useRouter()
+
+  if (router.isFallback) {
+    return <div>loading...</div>
+  }
+
   return (
-    <Layout>
+    <Layout loading={router.isFallback}>
       <Metatags
         title={`Mejor con Salud - ${post.title}`}
         desc={post.headline}
@@ -66,7 +73,7 @@ export async function getStaticPaths() {
 
   return {
     paths: posts.map(({ slug }) => ({ params: { slug: slug.toString() } })),
-    fallback: false,
+    fallback: true,
   }
 }
 
